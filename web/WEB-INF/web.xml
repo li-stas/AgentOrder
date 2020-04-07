@@ -22,4 +22,41 @@
         <servlet-name>list</servlet-name>
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
+    <!-- FileMenu servlet -->
+    <servlet>
+        <servlet-name>FileMenu</servlet-name>
+        <servlet-class>servlets.FileMenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileMenu</servlet-name>
+        <url-pattern>/filemenu</url-pattern>
+    </servlet-mapping>
+    <!-- ToDo servlet -->
+    <servlet>
+        <servlet-name>ToDo</servlet-name>
+        <servlet-class>servlets.ToDoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToDo</servlet-name>
+        <url-pattern>/todo</url-pattern>
+    </servlet-mapping>
+    <!-- LogOut servlet -->
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>servlets.ToDoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <!-- ServiceMenu servlet -->
+    <servlet>
+        <servlet-name>ServiceMenu</servlet-name>
+        <servlet-class>servlets.ServiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServiceMenu</servlet-name>
+        <url-pattern>/servicemenu</url-pattern>
+    </servlet-mapping>
+
 </web-app>
