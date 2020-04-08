@@ -22,15 +22,47 @@
         <servlet-name>list</servlet-name>
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
+
+
     <!-- FileMenu servlet -->
     <servlet>
         <servlet-name>FileMenu</servlet-name>
-        <servlet-class>servlets.FileMenuServlet</servlet-class>
+        <servlet-class>servlets.menu.FileMenuServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FileMenu</servlet-name>
         <url-pattern>/filemenu</url-pattern>
     </servlet-mapping>
+    <!-- ServiceMenu servlet -->
+    <servlet>
+        <servlet-name>ServiceMenu</servlet-name>
+        <servlet-class>servlets.menu.ServiceMenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServiceMenu</servlet-name>
+        <url-pattern>/servicemenu</url-pattern>
+    </servlet-mapping>
+    <!-- ReportMenu servlet -->
+    <servlet>
+        <servlet-name>ReportMenu</servlet-name>
+        <servlet-class>servlets.menu.ReportMenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportMenu</servlet-name>
+        <url-pattern>/reportmenu</url-pattern>
+    </servlet-mapping>
+
+    <!-- InfoMenu servlet -->
+    <servlet>
+        <servlet-name>InfoMenu</servlet-name>
+        <servlet-class>servlets.menu.InfoMenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InfoMenu</servlet-name>
+        <url-pattern>/infomenu</url-pattern>
+    </servlet-mapping>
+
+
     <!-- ToDo servlet -->
     <servlet>
         <servlet-name>ToDo</servlet-name>
@@ -49,14 +81,17 @@
         <servlet-name>LogOut</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
-    <!-- ServiceMenu servlet -->
+    <!-- InfoConnect servlet -->
     <servlet>
-        <servlet-name>ServiceMenu</servlet-name>
-        <servlet-class>servlets.ServiceServlet</servlet-class>
+        <servlet-name>InfoConnect</servlet-name>
+        <servlet-class>servlets.InfoConnect</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ServiceMenu</servlet-name>
-        <url-pattern>/servicemenu</url-pattern>
+        <servlet-name>InfoConnect</servlet-name>
+        <url-pattern>/infoconnect</url-pattern>
     </servlet-mapping>
+
+
+
 
 </web-app>

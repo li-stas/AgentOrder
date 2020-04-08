@@ -21,7 +21,7 @@
     <button onclick="location.href='/todo'">Выгрузить данные</button></br>
     <button onclick="location.href='/logout'">Выход</button>
     </br></br>
-    <button onclick="location.href='/'">Back to main</button>
+    <button onclick="location.href='../..'">Back to main</button>
 </div>
 </body>
 </html>
