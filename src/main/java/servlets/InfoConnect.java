@@ -1,7 +1,12 @@
 package servlets;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import dao.DAOConnection;
 import dao.OracleDAOConnection;
+
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +17,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class InfoConnect extends HttpServlet {
+    private static final Logger log = LoggerFactory.getLogger(InfoConnect.class);
+
 
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -19,7 +26,8 @@ public class InfoConnect extends HttpServlet {
 
         DAOConnection daoConnection = OracleDAOConnection.getInstance();
         List<String> aboutConnect = daoConnection.getAboutConnect();
-        System.out.println("aboutConnect=" + aboutConnect);
+        log.info("aboutConnect=" + aboutConnect);
+        //System.out.println("aboutConnect=" + aboutConnect);
         req.setAttribute("aboutConnect", aboutConnect);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/infoconnect.jsp");
