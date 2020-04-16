@@ -36,6 +36,10 @@ public class OracleDAOConnection implements DAOConnection {
         }
     }
 
+    public Connection getConnection() {
+        return connection;
+    }
+
     @Override
     public void connect() {
         //connectWebLogic();

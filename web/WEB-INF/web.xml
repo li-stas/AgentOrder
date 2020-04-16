@@ -42,6 +42,7 @@
         <servlet-name>ServiceMenu</servlet-name>
         <url-pattern>/servicemenu</url-pattern>
     </servlet-mapping>
+
     <!-- ReportMenu servlet -->
     <servlet>
         <servlet-name>ReportMenu</servlet-name>
@@ -50,6 +51,24 @@
     <servlet-mapping>
         <servlet-name>ReportMenu</servlet-name>
         <url-pattern>/reportmenu</url-pattern>
+    </servlet-mapping>
+    <!--                 ReportOrder01  -->
+    <servlet>
+        <servlet-name>ReportOrder01</servlet-name>
+        <servlet-class>servlets.report.RptOrder01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReportOrder01</servlet-name>
+        <url-pattern>/rptorder01</url-pattern>
+    </servlet-mapping>
+    <!--                   ReportTov01  -->
+    <servlet>
+        <servlet-name>RptTov01</servlet-name>
+        <servlet-class>servlets.report.RptOrder01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RptTov01</servlet-name>
+        <url-pattern>/rpttov01</url-pattern>
     </servlet-mapping>
 
     <!-- InfoMenu servlet -->
