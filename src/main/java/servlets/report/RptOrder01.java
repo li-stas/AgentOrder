@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class RptOrder01 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        ResultSet rs = null;
-        ResultSetMetaData md = null;
-        List<String> aHead = null;
+        List<String> aHead = Arrays.asList("Код ТА", "ФИО ТА", "Сумма", "К-во заказов");
+        List<List<String>> aRecList = new ArrayList<List<String>>();
 
         DAOConnection daoConnection = OracleDAOConnection.getInstance();
         daoConnection.connect();
@@ -33,9 +33,22 @@ public class RptOrder01 extends HttpServlet {
 
             Statement stmt = conn.createStatement();
 
-            rs = stmt.executeQuery(cSql);
-            md = rs.getMetaData();
-            aHead = Arrays.asList("Код ТА", "ФИО ТА", "Сумма", "К-во заказов");
+            ResultSet rs = stmt.executeQuery(cSql);
+            ResultSetMetaData md = rs.getMetaData();
+            int cols = md.getColumnCount();
+
+            if (rs.next()) {
+                do {
+                    List<String> columnList = new ArrayList<String>();
+                    for (int i = 0; i < cols; i++) {
+                        columnList.add(rs.getString(i + 1));
+                    }
+                    aRecList.add(columnList);
+                } while (rs.next());
+            }
+
+            System.out.println("int cols = " + md.getColumnCount());
+            System.out.println("aRecList = " + aRecList.toString());
 
 
         } catch (SQLException e) {
@@ -45,11 +58,11 @@ public class RptOrder01 extends HttpServlet {
 
 
         req.setCharacterEncoding("UTF-8");
-        req.setAttribute("ResultSet", rs);
-        req.setAttribute("MetaData", md);
-        req.setAttribute("Head", aHead);
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/rptorder01.jsp");
+        req.setAttribute("aHead", aHead);
+        req.setAttribute("aRecList", aRecList);
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/report/rptorder01.jsp");
         requestDispatcher.forward(req, resp);
     }
 }
