@@ -48,8 +48,9 @@ public class RptTov02DAO {
 
         int pageNumber = page;
         int pageSize = recordsPerPage;
-        List<List<String>> aRecList = new ArrayList<List<String>>();
+
         connection();
+        List<List<String>> aRecList = new ArrayList<List<String>>();
         try {
             /*
             https://stackoverflow.com/questions/241622/paging-with-oracle
