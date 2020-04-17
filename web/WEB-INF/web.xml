@@ -64,11 +64,20 @@
     <!--                   ReportTov01  -->
     <servlet>
         <servlet-name>RptTov01</servlet-name>
-        <servlet-class>servlets.report.RptOrder01</servlet-class>
+        <servlet-class>servlets.report.RptTov01</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RptTov01</servlet-name>
         <url-pattern>/rpttov01</url-pattern>
+    </servlet-mapping>
+    <!--                   ReportTov01  -->
+    <servlet>
+        <servlet-name>RptTov02</servlet-name>
+        <servlet-class>servlets.report.RptTov02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RptTov02</servlet-name>
+        <url-pattern>/rpttov02.do</url-pattern>
     </servlet-mapping>
 
     <!-- InfoMenu servlet -->

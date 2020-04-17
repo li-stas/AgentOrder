@@ -19,6 +19,7 @@
 <div>
     <button onclick="location.href='/rptorder01'">Отчет по Заказам</button></br>
     <button onclick="location.href='/rpttov01'">Отчет по Продукции</button></br>
+    <button onclick="location.href='/rpttov02.do'">Отчет по Продукции (стр) </button></br>
     </br></br>
     <button onclick="location.href='../..'">Back to main</button>
 </div>

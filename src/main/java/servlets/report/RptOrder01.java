@@ -16,8 +16,9 @@ import java.util.List;
 
 public class RptOrder01 extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
 
-        List<String> aHead = Arrays.asList("Код ТА", "ФИО ТА", "Сумма", "К-во заказов");
+        List<String> aHead = Arrays.asList("Код ТА", "ФИО ТА", "Сумма, грн", "К-во заказов");
         List<List<String>> aRecList = new ArrayList<List<String>>();
 
         DAOConnection daoConnection = OracleDAOConnection.getInstance();
@@ -36,6 +37,7 @@ public class RptOrder01 extends HttpServlet {
             ResultSet rs = stmt.executeQuery(cSql);
             ResultSetMetaData md = rs.getMetaData();
             int cols = md.getColumnCount();
+
 
             if (rs.next()) {
                 do {
@@ -57,7 +59,7 @@ public class RptOrder01 extends HttpServlet {
         daoConnection.disconnect();
 
 
-        req.setCharacterEncoding("UTF-8");
+
 
         req.setAttribute("aHead", aHead);
         req.setAttribute("aRecList", aRecList);
