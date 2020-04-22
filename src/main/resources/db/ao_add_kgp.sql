@@ -1,4 +1,4 @@
-
+-- ao_kgp
 INSERT INTO ao_kgp (KGp,NGrpol) VALUES (8000146,'М-Н ГЕРIВКА');
 INSERT INTO ao_kgp (KGp,NGrpol) VALUES (8000260,'М-Н ВИЗИТ /БУРКА/');
 INSERT INTO ao_kgp (KGp,NGrpol) VALUES (8000336,'М-Н МАЯК РОМНЫ');

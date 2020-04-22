@@ -15,12 +15,12 @@
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc7 -->
+        <!--https://medium.com/skillhive/spring-boot-spring-data-jpa-and-oracle-database-c4af89f727e0-->
+        <!-- Oracle database driver -->
         <dependency>
             <groupId>com.oracle</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>8</version>
-            <scope>system</scope>
-            <systemPath>C:/oraclexe/ojdbc7.jar</systemPath>
+            <artifactId>ojdbc7</artifactId>
+            <version>12.1.0</version>
         </dependency>
 
         <dependency>

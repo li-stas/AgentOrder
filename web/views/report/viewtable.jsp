@@ -32,6 +32,3 @@
     %>
     </tr>
 </table>
-<div>
-    <button onclick="location.href='../..'">Back to main</button>
-</div>

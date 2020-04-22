@@ -1,3 +1,4 @@
+-- ao_tov
 INSERT INTO ao_tov (MnTov,NAT,OsFo,NEI,CenPr) VALUES (5070017,'НАШ СIК 0.95л ВИНОГРАД-ЯБЛУКО т/п',399.000,'шт',15.500);
 INSERT INTO ao_tov (MnTov,NAT,OsFo,NEI,CenPr) VALUES (5070023,'НАШ СIК 0.95л ЯБЛУКО-МОРКВА т/п',81.000,'шт',15.500);
 INSERT INTO ao_tov (MnTov,NAT,OsFo,NEI,CenPr) VALUES (5070026,'НАШ СIК 0.95л ПЕРСИК т/п',147.000,'шт',15.500);

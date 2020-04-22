@@ -1,3 +1,4 @@
+-- ao_s_tag
 INSERT INTO ao_s_tag (KOD,FIO,KTAS) VALUES (51,'ПИНЧУК В.П.',51);
 INSERT INTO ao_s_tag (KOD,FIO,KTAS) VALUES (31,'ВИТМАРК',31);
 INSERT INTO ao_s_tag (KOD,FIO,KTAS) VALUES (364,'БУДЯК Т.И.',31);

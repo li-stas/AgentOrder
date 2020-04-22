@@ -18,34 +18,8 @@
     <h1>Отчет продаж продукции</h1>
 </div>
 
-<table border="2">
-<%--<table border="1" cellpadding="5" cellspacing="5">--%>
+<%@include file="viewtable.jsp"%>
 
-    <%
-        List<String> aHead = (List<String>) request.getAttribute("aHead");
-        List<List<String>> aRecList = (List<List<String>>) request.getAttribute("aRecList");
-
-
-        out.println("<tr>");
-        for (String cStr :  aHead) {
-            out.println("<td>" + cStr + "</td>");
-        }
-        out.println("</tr>");
-
-        if (aRecList != null && !aRecList.isEmpty()) {
-            for (List<String> aRec : aRecList) {
-                out.println("<tr>");
-                for (String cStr : aRec) {
-                    out.println("<td>" + cStr + "</td>");
-                }
-                out.println("</tr>");
-            }
-        } else {
-            out.println("<tr><td>There are no users yet!</td></tr>");
-        }
-    %>
-    </tr>
-</table>
 <div>
     <button onclick="location.href='../..'">Back to main</button>
 </div>

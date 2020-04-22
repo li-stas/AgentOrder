@@ -1,3 +1,4 @@
+-- ao_tmesto
 INSERT INTO ao_tmesto (TMesto,KPl,KGp,NTMesto) VALUES (189,1628012,2639022,'М-Н PRESS-ТИЖ ЛОТОС(безулий петро iванович)');
 INSERT INTO ao_tmesto (TMesto,KPl,KGp,NTMesto) VALUES (510,2111252,2111253,'М-Н ЛУЧ-1 ХАРЬКОВСКАЯ(приватна фiрма "луч")');
 INSERT INTO ao_tmesto (TMesto,KPl,KGp,NTMesto) VALUES (604,2173014,8460365,'М-Н ПРОДУКТЫ /СПД ТИШИК/(тiшик ольга леонiдiвна)');
